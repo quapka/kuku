@@ -23,13 +23,13 @@ using namespace cv;
 int main(int argc, char** argv)
 {   
     // the original video
-    VideoCapture capture("test_kuku.avi");
+    VideoCapture capture("../vids/test_kuku.avi");
     // its resolution
     int frame_width = capture.get(CV_CAP_PROP_FRAME_WIDTH);
     int frame_height = capture.get(CV_CAP_PROP_FRAME_HEIGHT);
     // output video
     VideoWriter video(
-        "bw_test_kuku.mp4",CV_FOURCC('H','2','6','4'),
+        "../vids/bw_test_kuku.mp4",CV_FOURCC('H','2','6','4'),
         10, Size(frame_width, frame_height),false
     );
     Mat frame;
